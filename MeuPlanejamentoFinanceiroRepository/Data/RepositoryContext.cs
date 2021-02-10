@@ -18,7 +18,6 @@ namespace MeuPlanejamentoFinanceiroRepository.Data
                 .HasKey(e => new { e.Descricao, e.PessoaCpf });
                 
         }
-
         public DbSet<Pessoa> Pessoas { get; set; }
         public DbSet<Gasto> Gastos { get; set; }
     }

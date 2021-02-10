@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MeuPlanejamentoFinanceiroDomain\MeuPlanejamentoFinanceiroDomain.csproj" />
+    <ProjectReference Include="..\MeuPlanejamentoFinanceiroService\MeuPlanejamentoFinanceiroService.csproj" />
   </ItemGroup>
 
 </Project>

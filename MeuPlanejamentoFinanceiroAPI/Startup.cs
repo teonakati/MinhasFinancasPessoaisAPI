@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MeuPlanejamentoFinanceiroService.Interfaces;
 
 namespace MeuPlanejamentoFinanceiroAPI
 {
@@ -32,6 +33,7 @@ namespace MeuPlanejamentoFinanceiroAPI
             {
                 options.UseSqlServer(Configuration.GetConnectionString("Default"), b => b.MigrationsAssembly("MeuPlanejamentoFinanceiroAPI"));
             });
+            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
             services.AddSwaggerGen(c => 
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
