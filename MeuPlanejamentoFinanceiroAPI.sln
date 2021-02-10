@@ -3,7 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuPlanejamentoFinanceiroAPI", "MeuPlanejamentoFinanceiroAPI\MeuPlanejamentoFinanceiroAPI.csproj", "{24AEB1BB-4C80-4BA9-9295-845156C44A87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuPlanejamentoFinanceiroAPI", "MeuPlanejamentoFinanceiroAPI\MeuPlanejamentoFinanceiroAPI.csproj", "{24AEB1BB-4C80-4BA9-9295-845156C44A87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{C4965970-DC2E-44CE-87A7-CABC30DCBAEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{8E4902DF-843F-4B75-B2FE-555B6DCDAA40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{7EB54A22-BF6A-4CC6-B36C-C28AD752B9E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{B8964110-F024-4338-9CE0-B4F10319C25D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuPlanejamentoFinanceiroDomain", "MeuPlanejamentoFinanceiroDomain\MeuPlanejamentoFinanceiroDomain.csproj", "{A0135A4E-456F-42F2-8345-AAB9D91A00FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuPlanejamentoFinanceiroRepository", "MeuPlanejamentoFinanceiroRepository\MeuPlanejamentoFinanceiroRepository.csproj", "{730F28EE-8322-4539-91CF-3433B7597E88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuPlanejamentoFinanceiroService", "MeuPlanejamentoFinanceiroService\MeuPlanejamentoFinanceiroService.csproj", "{E3ECC549-EDF9-4541-B374-6A014A28AF4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +29,27 @@ Global
 		{24AEB1BB-4C80-4BA9-9295-845156C44A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24AEB1BB-4C80-4BA9-9295-845156C44A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24AEB1BB-4C80-4BA9-9295-845156C44A87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0135A4E-456F-42F2-8345-AAB9D91A00FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0135A4E-456F-42F2-8345-AAB9D91A00FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0135A4E-456F-42F2-8345-AAB9D91A00FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0135A4E-456F-42F2-8345-AAB9D91A00FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{730F28EE-8322-4539-91CF-3433B7597E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{730F28EE-8322-4539-91CF-3433B7597E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{730F28EE-8322-4539-91CF-3433B7597E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{730F28EE-8322-4539-91CF-3433B7597E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3ECC549-EDF9-4541-B374-6A014A28AF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3ECC549-EDF9-4541-B374-6A014A28AF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3ECC549-EDF9-4541-B374-6A014A28AF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3ECC549-EDF9-4541-B374-6A014A28AF4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{24AEB1BB-4C80-4BA9-9295-845156C44A87} = {C4965970-DC2E-44CE-87A7-CABC30DCBAEC}
+		{A0135A4E-456F-42F2-8345-AAB9D91A00FB} = {8E4902DF-843F-4B75-B2FE-555B6DCDAA40}
+		{730F28EE-8322-4539-91CF-3433B7597E88} = {7EB54A22-BF6A-4CC6-B36C-C28AD752B9E7}
+		{E3ECC549-EDF9-4541-B374-6A014A28AF4B} = {B8964110-F024-4338-9CE0-B4F10319C25D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4D4D51DB-0814-428F-A1B4-98F210E7A628}

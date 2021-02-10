@@ -1,3 +1,4 @@
+using MeuPlanejamentoFinanceiroRepository.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -5,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +28,26 @@ namespace MeuPlanejamentoFinanceiroAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<RepositoryContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("Default"), b => b.MigrationsAssembly("MeuPlanejamentoFinanceiroAPI"));
+            });
+            services.AddSwaggerGen(c => 
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "MeuPlanejamentoFinanceiroAPI",
+                    Description = "Uma API simples de controle de gastos e planejamento financeiro.",
+                    //TermsOfService = new Uri("https://example.com/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Teo Nakati",
+                        Email = "devnakachi@gmail.com",
+                        Url = new Uri("https://github.com/teonakati"),
+                    }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,6 +57,13 @@ namespace MeuPlanejamentoFinanceiroAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MeuPlanejamentoFinanceiroAPI v1");
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseRouting();
 
